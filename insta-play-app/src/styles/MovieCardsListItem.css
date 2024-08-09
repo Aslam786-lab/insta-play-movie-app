@@ -1,0 +1,108 @@
+.movie-card {
+  max-width: 280px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0;
+}
+
+.movie-img img {
+  width: 280px;
+  height: 135px;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  gap: 35px;
+  padding: 10px 22px;
+  background: linear-gradient(0deg, #1a2b4a 0%, #2b507c 105.38%);
+  position: relative;
+}
+
+.movie-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+  font-weight: 400;
+}
+
+.movie-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.movie-rating {
+  color: white;
+  font-size: 14px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+}
+
+.play-movie {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+}
+
+.play-movie-img {
+  width: 32px;
+  height: 32px;
+}
+
+.tooltip {
+  font-size: 16px;
+  color: white;
+  visibility: hidden;
+  background-color: black;
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 60px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 200px;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.movie-title:hover + span {
+  visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .movie-img img {
+    width: 335px;
+    height: 120px;
+  }
+  .movie-info {
+    width: 335px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
